@@ -1,4 +1,5 @@
-/* General Reset */
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,10 +7,10 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Gowun Batang", sans-serif;
     background-color: #f4f4f4;
     color: #333;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 header {
@@ -134,13 +135,13 @@ footer {
 }
 
 .project-detail {
-    max-width: 900px;
+    max-width: 1200px;
     margin: auto;
     padding: 2rem;
-    text-align: left;
+    text-align: justify;
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    /* box-shadow: 0 2px 8px rgba(0,0,0,0.1); */
 }
 
 .project-detail h2 {
@@ -149,15 +150,25 @@ footer {
 }
 
 .project-image {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 1rem;
+  float: left;
+  max-width: 600px;  /* adjust width as needed */
+  height: auto;
+  margin: -1.5rem 0 1rem 0; /* right and bottom margin for spacing */
+  border-radius: 10px;
 }
 
 .project-detail ul {
-    margin: 1rem 0 1.5rem 1.5rem;
+    margin: 1rem 1rem 1.5rem 40rem;
     list-style-type: disc;
 }
+
+/* Clear float */
+.project-detail::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 
 .logo a {
     color: #fff;
@@ -234,4 +245,8 @@ footer {
 .img-container img.juke-img {
     object-fit: cover;       /* keep your normal crop behavior */
     object-position: center bottom; /* shift focus to bottom */
+}
+
+.project-text {
+    padding-left: -10rem;
 }
