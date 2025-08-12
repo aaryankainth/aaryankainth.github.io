@@ -2844,7 +2844,7 @@ img.u-pull-left {
  *
  * ------------------------------------------------------------------- */
 .s-pagewrap {
-    --header-height : 10rem;
+    --header-height : 5rem;
     display         : flex;
     flex-direction  : column;
     min-height      : 100%;
@@ -3178,7 +3178,7 @@ img.u-pull-left {
  *
  * ------------------------------------------------------------------- */
 .s-intro {
-    padding-top : calc(9.5 * var(--space));
+    padding-top : calc(9.5 * var(--space)*0.75);
     width       : 100%;
     position    : relative;
 }
@@ -3227,8 +3227,11 @@ img.u-pull-left {
  * ## intro bg
  * -------------------------------------------------------------------- */
 .s-intro__bg {
+    display             : block;
+    margin-left         : auto;
+    margin-right        : auto;
     aspect-ratio        : 1/1;
-    width               : 100%;
+    width               : 75%;
     background-color    : var(--color-gray-4);
     background-image    : url(../images/intro-bg.png);
     background-repeat   : no-repeat;
