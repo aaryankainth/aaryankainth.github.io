@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Gowun Batang", sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.5;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 1rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: background 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background: #555;
+    border-radius: 5px;
+}
+
+.hero, .about-section, .portfolio-section {
+    max-width: 1300px;
+    margin: auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #555;
+}
+
+/* Portfolio grid with 4 equal columns */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Single-wide card spans 1 column */
+.card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Double-wide card spans 2 columns */
+.card-double {
+    grid-column: span 2;
+}
+
+/* Image container with fixed height for consistent image sizing */
+.img-container {
+    position: relative;
+    width: 100%;
+    height: 350px; /* fixed height to match all project images */
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.img-container img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.profile-pic {
+    width: 150px;
+    border-radius: 50%;
+    margin: 1rem 0;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+.project-detail {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+    text-align: justify;
+    background: #fff;
+    border-radius: 10px;
+    /* box-shadow: 0 2px 8px rgba(0,0,0,0.1); */
+}
+
+.project-detail h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.project-image {
+  float: left;
+  max-width: 600px;  /* adjust width as needed */
+  height: auto;
+  margin: -1.5rem 0 1rem 0; /* right and bottom margin for spacing */
+  border-radius: 10px;
+}
+
+.project-detail ul {
+    margin: 1rem 1rem 1.5rem 40rem;
+    list-style-type: disc;
+}
+
+/* Clear float */
+.project-detail::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo a:hover {
+    text-decoration: underline;
+}
+
+/* Base image container used by all cards (keep your existing styles here) */
+.card .img-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* The image fills the container and crops nicely */
+.card .img-container img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center; /* default; change per-card if needed */
+  display: block;
+}
+
+/* ----- card-square: customizable aspect ratio per card ----- */
+/* Default ratio is square (1/1). Use --ratio to override. */
+.card.card-square .img-container {
+  /* Use modern aspect-ratio when available */
+  aspect-ratio: var(--ratio, 1/1);
+  height: auto;               /* let aspect-ratio control height */
+}
+
+/* Fallback for browsers that don't support aspect-ratio */
+@supports not (aspect-ratio: 1/1) {
+  .card.card-square .img-container {
+    /* We rely on padding-bottom to establish aspect ratio.
+       --ratio-percent must be supplied as (height/width)*100, e.g. square = 100%, 4:3 = 75%, 3:4 = 133.33% */
+    height: 0;
+    padding-bottom: var(--ratio-percent, 100%);
+  }
+
+  /* ensure image inside fallback behaves exactly the same */
+  .card.card-square .img-container img {
+    position: absolute;
+  }
+}
+
+/* Optional helpers you might like */
+.card.card-square .img-container img.shift-up {
+  object-position: center top;
+}
+
+.card.card-square .img-container img.shift-down {
+  object-position: center bottom;
+}
+
+/* small responsive tweak — reduce visual height a bit on narrow screens */
+@media (max-width: 480px) {
+  .card.card-square .img-container {
+    /* reduce perceived height on mobile (optional) */
+    aspect-ratio: var(--mobile-ratio, var(--ratio, 1/1));
+  }
+}
+
+.rover-img {
+    object-position: center top;
+}
+
+.img-container img.juke-img {
+    object-fit: cover;       /* keep your normal crop behavior */
+    object-position: center bottom; /* shift focus to bottom */
+}
+
+.project-text {
+    padding-left: -10rem;
+}
