@@ -593,6 +593,15 @@ textarea {
  *   A BLOCK GRID container's class attribute value begins with "block-".
  *
  * ------------------------------------------------------------------- */
+
+/* centered
+
+*/
+.centered {
+    display: grid;
+    place-items: center;
+}
+
 /* row 
  */
 .row {
