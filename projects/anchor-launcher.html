@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Anchor Launcher | Portfolio</title>
+
+    <link rel="stylesheet" href="../css/vendor.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body id="top">
+
+    <div id="page" class="s-pagewrap">
+
+        <header id="masthead" class="s-header">
+            <div class="s-header__block">
+                <div class="s-header__branding">
+                    <p class="site-title">
+                        <a href="../index.html" rel="home">Aaryan Kainth</a>
+                    </p>
+                </div>
+                <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+            </div>
+        </header>
+
+        <main class="s-about">
+            <div class="row">
+                <div class="column lg-12">
+                    <h1 class="text-huge-title">Anchor Launcher</h1>
+                    <img src="../images/portfolio/rover.png" alt="Anchor Launcher" style="max-width:600px; margin: 2rem 0;">
+                    
+                    <h2 class="text-pretitle">What Went Well</h2>
+                    <p>Placeholder text here describing successes in this project...</p>
+
+                    <h2 class="text-pretitle">What I Learned From My Failures</h2>
+                    <p>Placeholder text here about lessons learned, mistakes made, and improvements...</p>
+
+                    <h2 class="text-pretitle">What I Worked On</h2>
+                    <p>Placeholder text here detailing your specific contributions, design work, and skills used...</p>
+                </div>
+            </div>
+            <div class="centered">
+                <a href="../index.html" class="btn btn--stroke">← Back to Portfolio</a>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.body.classList.add("fade-in");
+
+            // Intercept links
+            document.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", e => {
+                const href = link.getAttribute("href");
+
+                // Ignore external or anchor links
+                if (!href || href.startsWith("http") || href.startsWith("#")) return;
+
+                e.preventDefault();
+                document.body.classList.remove("fade-in");
+                document.body.classList.add("fade-out");
+
+                setTimeout(() => {
+                window.location = href;
+                }, 400); // match transition duration
+            });
+            });
+        });
+    </script>
+
+</body>
+</html>

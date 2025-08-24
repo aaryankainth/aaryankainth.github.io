@@ -275,7 +275,7 @@
                 <div class="column" data-animate-el>
                     <div class="folio-item">
                         <div class="folio-item__thumb">
-                            <a class="folio-item__thumb-link" href="images/portfolio/rover.png" Title="Anchor Launcher" data-size="700x617">
+                            <a class="folio-item__thumb-link" href="projects/anchor-launcher">
                                 <img class="folio-short-img" src="images/portfolio/rover.png" alt="">
                             </a>
                         </div>
@@ -547,6 +547,29 @@
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.body.classList.add("fade-in");
+
+            // Intercept links
+            document.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", e => {
+                const href = link.getAttribute("href");
+
+                // Ignore external or anchor links
+                if (!href || href.startsWith("http") || href.startsWith("#")) return;
+
+                e.preventDefault();
+                document.body.classList.remove("fade-in");
+                document.body.classList.add("fade-out");
+
+                setTimeout(() => {
+                window.location = href;
+                }, 400); // match transition duration
+            });
+            });
+        });
+    </script>
 
 </body>
 </html>
