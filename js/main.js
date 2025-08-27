@@ -303,7 +303,7 @@
 
         ssMobileMenu();
         ssStickyHeader();
-        ssPhotoswipe();
+        // ssPhotoswipe();
         ssAnimateOnScroll();
         ssSwiper();
         ssAlertBoxes();

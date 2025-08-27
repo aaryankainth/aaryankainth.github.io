@@ -13,7 +13,7 @@ body {
     line-height: 1.5;
 }
 
-body {
+/* body {
   opacity: 0;
   transition: opacity 0.4s ease-in-out;
 }
@@ -24,7 +24,7 @@ body.fade-in {
 
 body.fade-out {
   opacity: 0;
-}
+} */
 
 header {
     background: #333;

@@ -317,6 +317,18 @@ body {
     margin : 0;
 }
 
+/* Fade transitions for secondary pages */
+body.secondary {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+body.secondary.fade-in {
+  opacity: 1;
+}
+body.secondary.fade-out {
+  opacity: 0;
+}
+
 main {
     display : block;
 }
