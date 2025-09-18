@@ -3,54 +3,150 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Project Title | Portfolio</title>
+  <title>Anchor Launcher | Portfolio</title>
 
   <link rel="stylesheet" href="../css/vendor.css" />
   <link rel="stylesheet" href="../css/styles.css" />
 
+  <style>
+    /* Fade animation scoped to secondary pages */
+    body.secondary { opacity: 0; transition: opacity .4s ease-in-out; }
+    body.secondary.fade-in { opacity: 1; }
+    body.secondary.fade-out { opacity: 0; }
+
+    main { padding-top: 0; }
+    section { padding: 0rem 0; }
+
+    #background .text-huge-title { margin-top: -5rem; }
+
+  </style>
 </head>
-<body id="top" class="secondary">
+    <body id="top" class="secondary">
 
-  <div id="page" class="s-pagewrap">
+        <div id="page" class="s-pagewrap">
 
-    <!-- Header -->
-    <header id="masthead" class="s-header">
-      <div class="s-header__block">
-        <div class="s-header__branding">
-          <p class="site-title">
-            <a href="../" rel="home">Aaryan Kainth</a>
-          </p>
+            <!-- Header -->
+            <header id="masthead" class="s-header">
+                <div class="s-header__block">
+                    <div class="s-header__branding">
+                        <p class="site-title">
+                            <a href="../" rel="home">Aaryan Kainth</a>
+                        </p>
+                    </div>
+
+                    <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+                </div>
+
+                <div class="row s-header__nav-wrap">
+                    
+                        <nav class="s-header__nav">
+                            <ul>
+                                <li><a class="smoothscroll" href="#background">Background</a></li>
+                                <li><a class="smoothscroll" href="#worked-on">Contributions</a></li>
+                                <li><a class="smoothscroll" href="#learned">Lessons</a></li>
+                                <li><a href="../index.html#works">Back to Portfolio</a></li>
+                            </ul>
+                        </nav>
+
+                        <ul class="s-header__social">
+                            <li>
+                                <a href="https://www.linkedin.com/in/aaryankainth">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+                                    <span class="u-screen-reader-text">LinkedIn</span>
+                                </a>
+                            </li>
+                        </ul>  <!-- end s-header__social -->
+
+                </div>
+            </header>
+
+
+            <!-- Main Sections -->
+            <main>
+
+                <!-- Project Title + Intro -->
+                <section id="background" class="s-about target-section">
+                    <div class="row">
+                        <div class="column lg-12">
+                            <h1 class="text-huge-title">Anchor Launcher</h1>
+                        </div>
+                    </div>
+
+                    <!-- Two-column layout: image left, background text right -->
+                    <div class="row project-layout">
+                        <iframe width="700px" height="394px" src="https://www.youtube-nocookie.com/embed/I0JLWEAKmac?si=fmB162KMzt0Ks7Yy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <div class="project-intro">
+                            <h2 class="text-pretitle">Project Background</h2>
+                            <p>
+                                This was the first research project I worked on in the Hawkes Lab. Lunar and Martian rovers can get entrapped at the bottom
+                                of steep slopes or in soft sand, so we designed a system to allow them to independently rescue themselves by launching and
+                                then winching on an anchor.
+
+                                In the video, we demonstrate a 2 degree increase in slope climbing ability on a simple rover platform at NASA's Glenn
+                                Research Center.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Full-width content below -->
+                <section id="worked-on" class="target-section">
+                    <div class="row">
+                        <div class="column lg-12">
+                            <h2 class="text-pretitle">My Contributions</h2>
+                            <p>
+                                My primary contributions to this project were the design of the anchor and the clutch mechanism that we used to winch the anchor.
+                                I also first authored the paper we wrote on the system, and presented it at ICRA 2025 in Atlanta!
+                            </p>
+                            <img class="project-image narrow" src="../images/other/presentation.jpg">
+                            <img class="project-image" src="../images/other/abstract.png">
+                        </div>
+                    </div>
+                </section>
+
+                <section id="learned" class="target-section">
+                    <div class="row">
+                    <div class="column lg-12">
+                        <h2 class="text-pretitle">What I Learned</h2>
+                        <p>Placeholder text about successes, failures, and lessons learned along the way.</p>
+                    </div>
+                    </div>
+                </section>
+
+                <!-- <section id="background" class="s-about target-section">
+                    <div class="row">
+                    <div class="column lg-12">
+                        <h1 class="text-huge-title">Project Title</h1>
+                        <img src="../images/portfolio/placeholder.png" alt="Project Image" style="max-width:600px; margin: 2rem 0;" />
+                        <div class="image-placeholder"> Project Image </div> comment me out later
+                        <h2 class="text-pretitle">Project Background</h2>
+                        <p>Placeholder text describing the context, goals, and overview of this project.</p>
+                    </div>
+                    </div>
+                </section>
+
+                <section id="worked-on" class="s-about target-section">
+                    <div class="row">
+                    <div class="column lg-12">
+                        <h2 class="text-pretitle">What I Worked On</h2>
+                        <p>Placeholder text about your specific contributions and responsibilities.</p>
+                    </div>
+                    </div>
+                </section>
+
+                <section id="learned" class="s-about target-section">
+                    <div class="row">
+                    <div class="column lg-12">
+                        <h2 class="text-pretitle">What I Learned</h2>
+                        <p>Placeholder text about successes, failures, and lessons learned along the way.</p>
+                    </div>
+                    </div>
+                </section> -->
+            </main>
         </div>
-        <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
-      </div>
-    </header>
 
-    <!-- Main Section -->
-    <section id="project" class="s-about target-section">
-      <div class="row">
-        <div class="column lg-12">
-          <h1 class="text-huge-title">Project Title</h1>
-          <img src="../images/portfolio/placeholder.png" alt="Project Image" style="max-width:600px; margin: 2rem 0;" />
-
-          <h2 class="text-pretitle">What Went Well</h2>
-          <p>Placeholder text describing successes in this project.</p>
-
-          <h2 class="text-pretitle">What I Learned From My Failures</h2>
-          <p>Placeholder text about lessons learned and mistakes made.</p>
-
-          <h2 class="text-pretitle">What I Worked On</h2>
-          <p>Placeholder text describing your contributions and skills used.</p>
-
-          <div style="margin-top:3rem;">
-            <a href="../" class="btn btn--stroke">← Back to Portfolio</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </div>
-
-  <!-- Fade Transition -->
-  <script src="../js/page-transitions.js"></script>
-</body>
+        <script src="../js/plugins.js"></script>
+        <script src="../js/main.js"></script>
+        <script src="../js/page-transitions.js"></script>
+    </body>
 </html>

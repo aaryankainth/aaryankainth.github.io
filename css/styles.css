@@ -3344,7 +3344,9 @@ img.u-pull-left {
     --timeline-vertical-border-pos : 8px;
 
     padding-top                    : var(--vspace-5);
-    padding-bottom                 : var(--vspace-3);
+    padding-bottom                 : var(--vspace-1);
+
+    text-align                     : justify;
 }
 
 .s-about__block {
@@ -3676,7 +3678,7 @@ img.u-pull-left {
  *
  * ------------------------------------------------------------------- */
 .s-works {
-    padding-top      : calc(6 * var(--space));
+    padding-top      : calc(3 * var(--space));
     padding-bottom   : calc(var(--space)/2);
     background-color : white;
 }
@@ -4207,3 +4209,45 @@ img.u-pull-left {
         width  : 1.6rem;
     }
 }
+
+/* Two-column "table-style" project layout */
+.project-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* equal split */
+  gap: 2rem;
+  align-items: start;
+  margin-bottom: 0rem;
+}
+
+.project-image.narrow {
+  width: 44%;
+  height: 500px;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-size: 1.2rem;
+  object-fit: cover;
+}
+
+.project-image {
+  width: 55%;
+  height: 500px;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  object-fit: cover;
+}
+
+.project-intro h2 {
+  margin-top: 0; /* remove default extra space */
+}
+
+/* Mobile: stack image on top */
+@media (max-width: 768px) {
+  .project-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
