@@ -4254,6 +4254,10 @@ img.u-pull-left {
   margin-top: 0; /* remove default extra space */
 }
 
+.project {
+    padding: 0;
+}
+
 /* Mobile: stack image on top */
 @media (max-width: 768px) {
   .project-layout {
