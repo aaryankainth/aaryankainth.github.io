@@ -4247,7 +4247,7 @@ img.u-pull-left {
   justify-content: center;
   font-size: 1.2rem;
   object-fit: cover;
-  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 .project-intro h2 {
