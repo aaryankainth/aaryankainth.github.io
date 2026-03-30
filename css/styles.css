@@ -2767,11 +2767,14 @@ img.u-pull-left {
 /* responsive video container
  */
 .video-container {
-    --aspect-ratio : 16/9;
     position       : relative;
     height         : 0;
     overflow       : hidden;
-    padding-bottom : calc(100%/(var(--aspect-ratio)));
+    padding-bottom : 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.video-container.portrait {
+    padding-bottom : 177.77%; /* 9:16 Aspect Ratio */
 }
 
 .video-container iframe,
@@ -4228,10 +4231,16 @@ img.u-pull-left {
 
 .project-layout.juke {
   display: grid;
-  grid-template-columns: 1fr 3fr; /* equal split */
+  grid-template-columns: 2fr 3fr; /* 40% vs 60% split */
   gap: 2rem;
   align-items: start;
   margin-bottom: 0rem;
+}
+
+.project-layout.juke .video-container.portrait {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .project-image.narrow {

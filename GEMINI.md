@@ -17,6 +17,8 @@ Personal portfolio for Aaryan Kainth, Mechanical Designer and Maker. Hosted on G
 - [x] Fix "Styles" link in branding to point to `index.html` instead of `../`.
 - [x] Standardize page transitions across all project pages (Using `js/page-transitions.js`).
 - [x] Resolve Photoswipe vs. HTML page link inconsistencies in `index.html` (Links now point directly to project pages).
+- [x] Ensure all pages are mobile-friendly (Updated all project pages and CSS).
+- [x] Support portrait YouTube Shorts (Added `.video-container.portrait` and fixed aspect ratio CSS).
 
 ## Next Steps
 - [ ] **Maintenance:** Periodically check for broken links as more projects are added.
@@ -27,6 +29,7 @@ Personal portfolio for Aaryan Kainth, Mechanical Designer and Maker. Hosted on G
 - *2026-03-28:* Established **Anti-AI Style Guide**: Engineering-first language, focus on tools/outcomes, `<span class="bold">` for emphasis.
 - *2026-03-30:* Completed batch updates for copyright 2026 and "Augustine" branding removal.
 - *2026-03-30:* Created `projects/capstone.html` and implemented standardized fade transitions across all pages using `js/page-transitions.js` and global CSS.
-- *2026-03-30:* Fixed project layout in `capstone.html` to support a 2-column image/description split.
+- *2026-03-30:* Fixed project layout in `capstone.html` and `jukebox.html` to support a 2-column image/description split.
 - *2026-03-30:* Corrected list margins in `css/styles.css` and fixed row/column alignment issues in project pages for mobile responsiveness.
 - *2026-03-30:* Resolved "blank screen" back-button issue using the `pageshow` event and prevented image flashing by setting initial CSS opacity to 0.
+- *2026-03-30:* Implemented support for portrait (9:16) videos with a custom grid split for the Jukebox project.
