@@ -1,7 +1,6 @@
 /* =================================================================== 
- * Augustine Main Stylesheet
- * Template Ver. 1.0.0
- * 03-16-2022
+ * Aaryan Kainth Portfolio Main Stylesheet
+ * 03-30-2026
  * ------------------------------------------------------------------
  *
  * TOC:
@@ -2737,6 +2736,7 @@ td:last-child {
     letter-spacing    : -0.02em;
     color             : var(--color-text-dark);
     margin-top        : 0;
+    margin-bottom     : 0;
 }
 
 .text-subtitle {
@@ -4274,3 +4274,35 @@ img.u-pull-left {
 .target-section {
   text-align: justify;
 }
+
+/* ===================================================================
+ * # PAGE TRANSITIONS
+ *
+ *
+ * ------------------------------------------------------------------- */
+[data-animate-el] {
+    opacity: 0;
+}
+
+body {
+    opacity    : 1;
+    transition : opacity .4s ease-in-out;
+}
+
+body.fade-in {
+    opacity : 1;
+}
+
+body.fade-out {
+    opacity : 0;
+}
+
+/* Ensure secondary pages start hidden for the fade-in effect */
+body.secondary {
+    opacity : 0;
+}
+
+body.secondary.fade-in {
+    opacity : 1;
+}
+

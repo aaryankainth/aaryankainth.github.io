@@ -9,16 +9,10 @@
   <link rel="stylesheet" href="../css/styles.css" />
 
   <style>
-    /* Fade animation scoped to secondary pages */
-    body.secondary { opacity: 0; transition: opacity .4s ease-in-out; }
-    body.secondary.fade-in { opacity: 1; }
-    body.secondary.fade-out { opacity: 0; }
+    main { padding-top: var(--vspace-3); }
+    section { padding: 0; }
 
-    main { padding-top: 0; }
-    section { padding: 0rem 0; }
-
-    #background .text-huge-title { margin-top: -5rem; }
-
+    .text-huge-title { margin-top: 0; }
   </style>
 </head>
     <body id="top" class="secondary">
@@ -30,7 +24,7 @@
                 <div class="s-header__block">
                     <div class="s-header__branding">
                         <p class="site-title">
-                            <a href="../" rel="home">Aaryan Kainth</a>
+                            <a href="../index.html" rel="home">Aaryan Kainth</a>
                         </p>
                     </div>
 
@@ -65,7 +59,7 @@
             <main>
 
                 <!-- Project Title + Intro -->
-                <section class="s-about target-section">
+                <section class="target-section">
                     <div class="row">
                         <div class="column lg-12">
                             <h1 class="text-huge-title">Hexagonal Shelves</h1>
@@ -80,26 +74,30 @@
                 </section>
 
                 <!-- Full-width content below -->
-                <section class="target-section">
+                <section id="background" class="target-section">
                     <div class="row">
-                        <div class="project-intro">
-                            <h2 class="text-pretitle">Project Background</h2>
-                            <p id="background">
-                                My roommate (pictured in the first image) and I thought our walls looked a little bland. We wanted to make something to spice things up a bit, so over
-                                winter break our sophomore year, we made a set of six hexagonal shelves to split between us!
-                            </p>
+                        <div class="column lg-12">
+                            <div class="project-intro">
+                                <h2 class="text-pretitle">Project Background</h2>
+                                <p>
+                                    My roommate (pictured in the first image) and I thought our walls looked a little bland. We wanted to make something to spice things up a bit, so over
+                                    winter break our sophomore year, we made a set of six hexagonal shelves to split between us!
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </section>
 
                 <section id="learned" class="target-section">
                     <div class="row">
-                        <h2 class="text-pretitle">Lessons Learned</h2>
-                        <p>
-                            From this project, I got better at using a miter saw, as well as learned more on the importance of planning. The lesson about
-                            planning was almost learned the hard way, when we realized that we had been cutting the wrong angle (60 instead of 30 degrees) into the wood!
-                            Luckily, we realized very quickly, and were still able to make all the shelves as we wanted.
-                        </p>
+                        <div class="column lg-12">
+                            <h2 class="text-pretitle">Lessons Learned</h2>
+                            <p>
+                                From this project, I got better at using a miter saw, as well as learned more on the importance of planning. The lesson about
+                                planning was almost learned the hard way, when we realized that we had been cutting the wrong angle (60 instead of 30 degrees) into the wood!
+                                Luckily, we realized very quickly, and were still able to make all the shelves as we wanted.
+                            </p>
+                        </div>
                     </div>
                 </section>
 

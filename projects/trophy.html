@@ -9,16 +9,10 @@
   <link rel="stylesheet" href="../css/styles.css" />
 
   <style>
-    /* Fade animation scoped to secondary pages */
-    body.secondary { opacity: 0; transition: opacity .4s ease-in-out; }
-    body.secondary.fade-in { opacity: 1; }
-    body.secondary.fade-out { opacity: 0; }
+    main { padding-top: var(--vspace-3); }
+    section { padding: 0; }
 
-    main { padding-top: 0; }
-    section { padding: 0rem 0; }
-
-    #background .text-huge-title { margin-top: -5rem; }
-
+    .text-huge-title { margin-top: 0; }
   </style>
 </head>
     <body id="top" class="secondary">
@@ -30,7 +24,7 @@
                 <div class="s-header__block">
                     <div class="s-header__branding">
                         <p class="site-title">
-                            <a href="../" rel="home">Aaryan Kainth</a>
+                            <a href="../index.html" rel="home">Aaryan Kainth</a>
                         </p>
                     </div>
 
@@ -65,7 +59,7 @@
             <main>
 
                 <!-- Project Title + Intro -->
-                <section class="s-about target-section">
+                <section class="target-section">
                     <div class="row">
                         <div class="column lg-12">
                             <h1 class="text-huge-title">Ping Pong Trophy</h1>
@@ -79,20 +73,29 @@
                     </div>
                 </section>
 
-                <!-- Full-width content below -->
-                <section class="target-section">
+                <section id="background" class="target-section">
                     <div class="row">
-                        <div class="project-intro">
-                            <h2 class="text-pretitle">Project Background</h2>
-                            <p id="background">
-                                During my internship at Imagineering, us interns threw a ping pong competition between the Ride and
-                                R&D Departments.
-                                Mine and my friend's task was to design and build the trophy, but we only had 24 hours to work on it.
-                            <br id="worked-on">
-                                Using a laser cutter, scrap material, and some LED lights we found, we managed to put together a pretty solid trophy - and we also won it back for R&D!
-                            </p>
-                            <div>
+                        <div class="column lg-12">
+                            <div class="project-intro">
+                                <h2 class="text-pretitle">Project Background</h2>
+                                <p>
+                                    During my internship at Imagineering, us interns threw a ping pong competition between the Ride and
+                                    R&D Departments.
+                                    Mine and my friend's task was to design and build the trophy, but we only had 24 hours to work on it.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="worked-on" class="target-section">
+                    <div class="row">
+                        <div class="column lg-12">
+                            <div class="project-intro">
                                 <h2 class="text-pretitle">My Contributions</h2>
+                                <p>
+                                    Using a laser cutter, scrap material, and some LED lights we found, we managed to put together a pretty solid trophy - and we also won it back for R&D!
+                                </p>
                                 <p>
                                     My primary contributions to this project were assembling the electronics, and designing and
                                     making the lightsaber-style handle of the trophy!
@@ -104,7 +107,7 @@
 
                 <section id="learned" class="target-section">
                     <div class="row">
-                        <div class="column lg-12 project">
+                        <div class="column lg-12">
                             <h2 class="text-pretitle">Lessons Learned</h2>
                             <p>
                                 This project allowed me to practice several skills such as:

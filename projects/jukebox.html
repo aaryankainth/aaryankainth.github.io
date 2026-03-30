@@ -9,16 +9,10 @@
   <link rel="stylesheet" href="../css/styles.css" />
 
   <style>
-    /* Fade animation scoped to secondary pages */
-    body.secondary { opacity: 0; transition: opacity .4s ease-in-out; }
-    body.secondary.fade-in { opacity: 1; }
-    body.secondary.fade-out { opacity: 0; }
+    main { padding-top: var(--vspace-3); }
+    section { padding: 0; }
 
-    main { padding-top: 0; }
-    section { padding: 0rem 0; }
-
-    #background .text-huge-title { margin-top: -5rem; }
-
+    .text-huge-title { margin-top: 0; }
   </style>
 </head>
     <body id="top" class="secondary">
@@ -30,7 +24,7 @@
                 <div class="s-header__block">
                     <div class="s-header__branding">
                         <p class="site-title">
-                            <a href="../" rel="home">Aaryan Kainth</a>
+                            <a href="../index.html" rel="home">Aaryan Kainth</a>
                         </p>
                     </div>
 
@@ -65,7 +59,7 @@
             <main>
 
                 <!-- Project Title + Intro -->
-                <section id="background" class="s-about target-section">
+                <section id="background" class="target-section">
                     <div class="row">
                         <div class="column lg-12">
                             <h1 class="text-huge-title">CD Jukebox</h1>
@@ -74,33 +68,45 @@
 
                     <!-- Two-column layout: image left, background text right -->
                     <div class="row project-layout juke">
-                        <iframe width="327" height="581" src="https://www.youtube.com/embed/msf_0bhuDKk" title="CD Jukebox" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/msf_0bhuDKk" title="CD Jukebox" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
                         <div class="project-intro">
                             <h2 class="text-pretitle">Project Background</h2>
                             <p>
                                 In Spring 2025, I worked on a class project, for which we chose to make a jukebox-style robot that would insert a selected game into my Wii.
                                 
-                            <br id="worked-on">
+                                <br>
                                 We made the robot body out of laser-cut wood and spare electronics we already had laying around, making it a cheap build for us!
                             </p>
-                            <div id="learned">
-                                <h2 class="text-pretitle">My Contributions</h2>
-                                <p>
-                                    My primary contribution to this project was the design of the lead screw-based position control system for the carriage. I implemented
-                                    a PID controller that allowed us to control the position of the carriage to within 2mm!
-                                </p>
-                            </div>
-                            <div>
-                                <h2 class="text-pretitle">Lessons Learned</h2>
-                                <p>
-                                    During this project, I learned a lot by designing and implementing the control mechanism for this project:
-                                </p>
-                                <ul>
-                                    <li>2D CAD for laser cutting</li>
-                                    <li>Programming and tuning a PID control loop in C++</li>
-                                    <li>Mechanical design, specifically how NOT to design a tensioning system for a belt drive</li>
-                                </ul>
-                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="worked-on" class="target-section">
+                    <div class="row">
+                        <div class="column lg-12">
+                            <h2 class="text-pretitle">My Contributions</h2>
+                            <p>
+                                My primary contribution to this project was the design of the lead screw-based position control system for the carriage. I implemented
+                                a PID controller that allowed us to control the position of the carriage to within 2mm!
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="learned" class="target-section">
+                    <div class="row">
+                        <div class="column lg-12">
+                            <h2 class="text-pretitle">Lessons Learned</h2>
+                            <p>
+                                During this project, I learned a lot by designing and implementing the control mechanism for this project:
+                            </p>
+                            <ul>
+                                <li>2D CAD for laser cutting</li>
+                                <li>Programming and tuning a PID control loop in C++</li>
+                                <li>Mechanical design, specifically how NOT to design a tensioning system for a belt drive</li>
+                            </ul>
                         </div>
                     </div>
                 </section>

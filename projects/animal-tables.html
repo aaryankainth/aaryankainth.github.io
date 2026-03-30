@@ -9,16 +9,9 @@
   <link rel="stylesheet" href="../css/styles.css" />
 
   <style>
-    /* Fade animation scoped to secondary pages */
-    body.secondary { opacity: 0; transition: opacity .4s ease-in-out; }
-    body.secondary.fade-in { opacity: 1; }
-    body.secondary.fade-out { opacity: 0; }
+    main { padding-top: var(--vspace-3); }
 
-    main { padding-top: 0; }
-    section { padding: 0rem 0; }
-
-    #background .text-huge-title { margin-top: -5rem; }
-
+    .text-huge-title { margin-top: 0; }
   </style>
 </head>
     <body id="top" class="secondary">
@@ -30,7 +23,7 @@
                 <div class="s-header__block">
                     <div class="s-header__branding">
                         <p class="site-title">
-                            <a href="../" rel="home">Aaryan Kainth</a>
+                            <a href="../index.html" rel="home">Aaryan Kainth</a>
                         </p>
                     </div>
 
@@ -65,7 +58,7 @@
             <main>
 
                 <!-- Project Title + Intro -->
-                <section id="background" class="s-about target-section">
+                <section id="background" class="target-section">
                     <div class="row">
                         <div class="column lg-12">
                             <h1 class="text-huge-title">Animal Tables</h1>
@@ -101,12 +94,12 @@
                         </div>
                     </div>
 
-                    <section id="pictures" class="target-section">
-                        <div class="row">
+                    <div id="pictures" class="row">
+                        <div class="column lg-12">
                             <img class="project-image narrow" src="../images/other/tablesassembly.png">
                             <img class="project-image" src="../images/other/tablespainting.png">
                         </div>
-                    </section>
+                    </div>
 
                 </section>
 

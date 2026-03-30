@@ -1,5 +1,5 @@
 /* ===================================================================
- * Augustine 1.0.0 - Main JS
+ * Aaryan Kainth Portfolio 1.0.0 - Main JS
  *
  *
  * ------------------------------------------------------------------- */
@@ -143,6 +143,16 @@
 
         const blocks = document.querySelectorAll('[data-animate-block]');
 
+        if (window.location.hash === '#works') {
+            blocks.forEach(function(current) {
+                current.classList.add('ss-animated');
+                current.querySelectorAll('[data-animate-el]').forEach(function(el) {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                });
+            });
+        }
+
         window.addEventListener('scroll', animateOnScroll);
 
         function animateOnScroll() {
@@ -174,6 +184,9 @@
                 }
             });
         }
+
+        // Trigger once to catch elements in view on load
+        animateOnScroll();
 
     }; // end ssAnimateOnScroll
 

@@ -3,13 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Anchor Launcher | Portfolio</title>
+  <title>Capstone Project | Portfolio</title>
 
   <link rel="stylesheet" href="../css/vendor.css" />
   <link rel="stylesheet" href="../css/styles.css" />
 
   <style>
     main { padding-top: var(--vspace-3); }
+    section { padding: 0; }
 
     .text-huge-title { margin-top: 0; }
   </style>
@@ -61,41 +62,31 @@
                 <section id="background" class="target-section">
                     <div class="row">
                         <div class="column lg-12">
-                            <h1 class="text-huge-title">Anchor Launcher</h1>
+                            <h1 class="text-huge-title">Pinch-Free Animatronic Shells</h1>
                         </div>
                     </div>
 
                     <!-- Two-column layout: image left, background text right -->
                     <div class="row project-layout">
-                        <div class="video-container">
-                            <iframe src="https://www.youtube-nocookie.com/embed/I0JLWEAKmac?si=fmB162KMzt0Ks7Yy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
+                        <!-- Project image -->
+                        <img src="../images/other/pinchpoints.png" alt="Pinch-Free Animatronic Shells">
+                        
                         <div class="project-intro">
                             <h2 class="text-pretitle">Project Background</h2>
                             <p>
-                                This was the first research project I worked on in the Hawkes Lab. Lunar and Martian rovers can get entrapped at the bottom
-                                of steep slopes or in soft sand, so we designed a system to allow them to independently rescue themselves by launching and
-                                then winching on an anchor.
-
-                                In the video, we demonstrate a 2 degree increase in slope climbing ability on a simple rover platform at NASA's Glenn
-                                Research Center.
+                                This project is focused on the design and development of pinch-free animatronic shells. 
+                                In many animatronic systems, moving parts can create pinch points that are dangerous for guests.
+                                Our goal is to create a shell system that eliminates these hazards while 
+                                maintaining the required range of motion and aesthetic quality of the robot arm.
                             </p>
-                        </div>
-                    </div>
-                </section>
 
-                <!-- Full-width content below -->
-                <section id="worked-on" class="target-section">
-                    <div class="row">
-                        <div class="column lg-12">
                             <h2 class="text-pretitle">My Contributions</h2>
                             <p>
-                                My primary contributions to this project were the design of the anchor and the clutch mechanism that we used to winch the anchor.
-                                I also did the experimentation and data collection for our modelling, and first authored the paper we wrote on the system, which
-                                I presented at ICRA 2025 in Atlanta. <a href="../resources/ICRA2025.pdf">Click here to read the paper!</a>
+                                I initially had the idea of starting a capstone project with WDI when I was interning there, so I <span class="bold">connected the relevant people at WDI with UCSB's capstone team</span> to get one started.
+                                <br>
+                                My primary technical contributions to this project include the <span class="bold">mechanical design of the tooth and neck pinch prevention,</span> 
+                                and the <span class="bold">animation of the robot using ROS2</span> and the Dynamixel SDK. I'm also handling the heat dissipation testing of our motors to make sure our pinch solutions don't end up overheating the robot.
                             </p>
-                            <img class="project-image narrow" src="../images/other/presentation.jpg">
-                            <img class="project-image" src="../images/other/abstract.png">
                         </div>
                     </div>
                 </section>
@@ -105,21 +96,18 @@
                         <div class="column lg-12">
                             <h2 class="text-pretitle">Lessons Learned</h2>
                             <p>
-                                Being my first exposure to a longer-term project - start to finish, I worked on this one for about a year and a half - I learned many
-                                different skills, including but not limited to:
+                                As this project has continued, I've gained valuable experience in:
                             </p>
                             <ul>
-                                <li>CAD (specifically SolidWorks)</li>
-                                <li>Mechanism design, including how to leverage previously developed mechanisms to do new things</li>
-                                <li>Experimental design and physical modelling</li>
-                                <li>Technical writing</li>
+                                <li>Exporting URDF files from SolidWorks</li>
+                                <li>Integration of soft materials in robotic systems (urethane foam casting for the teeth)</li>
+                                <li>Iterative design and testing for complex mechanical assemblies</li>
                             </ul>
                         </div>
                     </div>
                 </section>
 
             </main>
-
         </div>
 
         <script src="../js/plugins.js"></script>

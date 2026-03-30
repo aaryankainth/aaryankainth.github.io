@@ -3,22 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Anchor Launcher | Portfolio</title>
+  <title>WDI Internship | Portfolio</title>
 
   <link rel="stylesheet" href="../css/vendor.css" />
   <link rel="stylesheet" href="../css/styles.css" />
 
   <style>
-    /* Fade animation scoped to secondary pages */
-    body.secondary { opacity: 0; transition: opacity .4s ease-in-out; }
-    body.secondary.fade-in { opacity: 1; }
-    body.secondary.fade-out { opacity: 0; }
+    main { padding-top: var(--vspace-3); }
+    section { padding: 0; }
 
-    main { padding-top: 0; }
-    section { padding: 0rem 0; }
-
-    #background .text-huge-title { margin-top: -5rem; }
-
+    .text-huge-title { margin-top: 0; }
   </style>
 </head>
     <body id="top" class="secondary">
@@ -30,7 +24,7 @@
                 <div class="s-header__block">
                     <div class="s-header__branding">
                         <p class="site-title">
-                            <a href="../" rel="home">Aaryan Kainth</a>
+                            <a href="../index.html" rel="home">Aaryan Kainth</a>
                         </p>
                     </div>
 
@@ -52,43 +46,46 @@
                             <li>
                                 <a href="https://www.linkedin.com/in/aaryankainth">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
-                                    <span class="u-screen-reader-text">LinkedIn</span>
-                                </a>
-                            </li>
-                        </ul>  <!-- end s-header__social -->
+                            <span class="u-screen-reader-text">LinkedIn</span>
+                        </a>
+                    </li>
+                </ul>  <!-- end s-header__social -->
 
+            </div>
+        </header>
+
+
+        <!-- Main Sections -->
+        <main>
+
+            <!-- Project Title + Intro -->
+            <section id="background" class="target-section">
+                <div class="row">
+                    <div class="column lg-12">
+                        <h1 class="text-huge-title">WDI Internship</h1>
+                    </div>
                 </div>
-            </header>
 
-
-            <!-- Main Sections -->
-            <main>
-
-                <!-- Project Title + Intro -->
-                <section id="background" class="s-about target-section">
-                    <div class="row">
-                        <div class="column lg-12">
-                            <h1 class="text-huge-title">WDI Internship</h1>
-                        </div>
+                <!-- Two-column layout: image left, background text right -->
+                <div class="row project-layout">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/EoPN02bmzrE" title="NEW Robotic Olaf Revealed! Inside Disney Imagineering R&amp;D | We Call It Imagineering" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
+                    <div class="project-intro">
+                        <h2 class="text-pretitle">Project Background</h2>
+                        <p>
+                            For my internship at WDI R&D, I worked on a hydrofoil platform that they're currently developing!
 
-                    <!-- Two-column layout: image left, background text right -->
-                    <div class="row project-layout">
-                        <iframe width="899" height="505" src="https://www.youtube.com/embed/EoPN02bmzrE" title="NEW Robotic Olaf Revealed! Inside Disney Imagineering R&amp;D | We Call It Imagineering" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <div class="project-intro">
-                            <h2 class="text-pretitle">Project Background</h2>
-                            <p>
-                                For my internship at WDI R&D, I worked on a hydrofoil platform that they're currently developing!
-
-                                Watch the video from 27:34 to see the project background, and from 28:34 to see more about the hydrofoil itself.
-                            </p>
-                        </div>
+                            Watch the video from 27:34 to see the project background, and from 28:34 to see more about the hydrofoil itself.
+                        </p>
                     </div>
-                </section>
+                </div>
+            </section>
 
-                <!-- Full-width content below -->
-                <section id="worked-on" class="target-section">
-                    <div class="row">
+            <!-- Full-width content below -->
+            <section id="worked-on" class="target-section">
+                <div class="row">
+                    <div class="column lg-12">
                         <h2 class="text-pretitle">My Contributions</h2>
                         <p>
                             During this internship, I was interning alongside my friend Nicolas, who is a super smart guy - <a href="https://www.nicolascoleman.me/">check out his website here!</a>
@@ -101,10 +98,12 @@
                             I also designed some auxiliary tools, including a SolidWorks preset for the Hole Wizard that allows automatic creation of parameter-driven holes for McMaster-Carr Heat Set Inserts.
                         </p>
                     </div>
-                </section>
+                </div>
+            </section>
 
-                <section id="learned" class="target-section">
-                    <div class="row">
+            <section id="learned" class="target-section">
+                <div class="row">
+                    <div class="column lg-12">
                         <h2 class="text-pretitle">Lessons Learned</h2>
                         <p>
                             This internship gave me many insights into how to approach design tasks in industry. For instance, in my research work, I'd always just focused on getting something together that
@@ -122,7 +121,8 @@
                             <li>Soldering</li>
                         </ul>
                     </div>
-                </section>
+                </div>
+            </section>
 
             </main>
         </div>
